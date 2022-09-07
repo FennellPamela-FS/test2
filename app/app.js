@@ -5,26 +5,16 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/db', router);
+app.use('/', router);
 
-
+// default SERVICE call (kinda like an actuator)
 app.get('/', (req, res, next) => {
     res.status(200).json({
         message: 'Service is Up',
     });
 });
 
-// default SERVICE call (kinda like an actuator)
-// app.get('/', (req, res, next) => {
-//     res.status(200).json({
-//         message: 'Service is Up',
-//     });
-// });
-
 // cors = Cross Origin Resource Sharing
-// localhost:3000/ this for example will appear in ("/")
-// or 
-// localhost:3000/example will appear as ("/example")
 app.use('/', router);
 
 // middleware to handle errors and bad urls
