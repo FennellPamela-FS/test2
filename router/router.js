@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-// router methods for al requests
+// router methods for all requests
 router.get('/get', (req, res) => {
     res.status(200).json({
         message: 'Using - Get',
@@ -58,10 +58,5 @@ router.delete('/:id', (req, res) => {
         },
     });
 });
-
-
-
-
-
 
 module.exports = router;
