@@ -33,6 +33,11 @@ router.post('/post', (req, res) => {
     });
 });
 
+router.put('/put/:id', (req, res) => {
+    const api = req.params.api;
+
+})
+
 
 
 // router.patch by ID, always
